@@ -136,3 +136,28 @@ input[type="submit"] {
 .question__element p {
   font-size: 18px;
 }
+
+#logout {
+  display: none;
+  font-size: 24px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+#logout:active {
+  transform: scale(0.95);
+}
+
+.reply {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

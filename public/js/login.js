@@ -1,8 +1,3 @@
-const uname = document.querySelector('#uname').value
-const actBtn = document.getElementById('login')
-
-const password = document.querySelector('#psw').value
-
 const login = async (identifier, password) => {
   try {
     const res = await fetch('http://localhost:1337/api/auth/local', {
@@ -25,17 +20,23 @@ const login = async (identifier, password) => {
   }
 }
 
+let me;
 document.querySelector('#btn').addEventListener('click', async (e) => {
   e.preventDefault()
+  const uname = document.querySelector('#uname').value
+
+  const password = document.querySelector('#psw').value
 
   const data = await login(uname, password)
 
-  actBtn.innerHTML = 'Logout'
+  me = data.user
 
   if (data) {
-    window.location.href = '/'
+    window.location.href = '/index.html'
   }
 })
+
+export default me
 
 
 
